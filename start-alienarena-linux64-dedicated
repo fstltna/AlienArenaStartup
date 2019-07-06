@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /root/Alien\ Arena
+./alienarena-linux64-dedicated +exec server.cfg 
+exit 0
