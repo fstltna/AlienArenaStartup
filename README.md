@@ -1,7 +1,7 @@
 # Alien Arena Startup Scripts (1.0)
 Alternate startup scripts for the Alien Arena game - uses the "screen" command to manage session. This also restarts the game process if it crashes.
 
-Official support sites: [Official Github Repo](https://github.com/fstltna/SynchronetStartup) - [Official Forum](https://synchronetbbs.org/index.php/forum/alternate-startup-scripts) 
+Official support sites: [Official Github Repo](https://github.com/fstltna/AlienArenaStartup) - [Official Forum](https://fps.gameplayer.club/index.php/forum/utilities) 
  ![Alien Arena Logo](https://FPS.GamePlayer.club/aa2k12logo2.jpg) 
 
 ---
