@@ -49,7 +49,7 @@ if ($Command eq "start")
 			unlink("$ALIENARENADIR/nostart");
 		}
 		# Start the screen process
-		system("/usr/bin/nohup $ALIENARENADIR/startalenarena > $ALIENARENADIR/AlienArenaServerStartup.log\&");
+		system("/usr/bin/nohup $ALIENARENADIR/startalienarena > $ALIENARENADIR/AlienArenaServerStartup.log\&");
 	}
 }
 elsif ($Command eq "stop")
