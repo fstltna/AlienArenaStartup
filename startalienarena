@@ -15,7 +15,6 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 my $ALIENARENADIR = "/root/AlienArena";
-my $SCREENCMD = "/usr/bin/screen";
 
 # No changes below here...
 
@@ -53,7 +52,7 @@ while (-1)
 			close($OUTF);
 			chdir "$ALIENARENADIR";
 			print "Starting screen process\n";
-			system("$SCREENCMD -fa -S AlienArena -d -U -m ./start-alienarena-linux64-dedicated");
+			system("/usr/bin/screen -fa -S AlienArena -d -U -m ./start-alienarena-linux64-dedicated");
 		}
 	}
 	else
