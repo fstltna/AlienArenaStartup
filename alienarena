@@ -27,7 +27,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-my $ALIENARENADIR = "/root/Alien\ Arena";
+my $ALIENARENADIR = "/root/AlienArena";
 
 my $Command = $ARGV[0];
 if ($Command eq "")
@@ -42,20 +42,20 @@ if ($Command eq "start")
 	if ($running eq "")
 	{
 		print "Starting Alien Arena Server...\n";
-		if (-f "'$ALIENARENADIR/nostart'")
+		if (-f "$ALIENARENADIR/nostart")
 		{
-			print "Removing '$ALIENARENADIR/nostart'\n";
+			print "Removing $ALIENARENADIR/nostart\n";
 			# Remove the lock file if it exists
-			unlink("'$ALIENARENADIR/nostart'");
+			unlink("$ALIENARENADIR/nostart");
 		}
 		# Start the screen process
-		system("/usr/bin/nohup '$ALIENARENADIR/startalenarena' > '$ALIENARENADIR/AlienArenaServerStartup.log'\&");
+		system("/usr/bin/nohup $ALIENARENADIR/startalenarena > $ALIENARENADIR/AlienArenaServerStartup.log\&");
 	}
 }
 elsif ($Command eq "stop")
 {
 	print "Stopping Alien Arena Server Process...\n";
-	system("touch '$ALIENARENADIR/nostart'");
+	system("touch $ALIENARENADIR/nostart");
 	if ($running ne "")
 	{
 		# Process is running, kill it
@@ -64,10 +64,10 @@ elsif ($Command eq "stop")
 }
 elsif ($Command eq "restart")
 {
-	if (-f "'$ALIENARENADIR/nostart'")
+	if (-f "$ALIENARENADIR/nostart")
 	{
-		print("Removing '$ALIENARENADIR/nostart'\n");
-		unlink("'$ALIENARENADIR/nostart'");
+		print("Removing $ALIENARENADIR/nostart\n");
+		unlink("$ALIENARENADIR/nostart");
 	}
 	if ($running ne "")
 	{
