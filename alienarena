@@ -42,14 +42,14 @@ if ($Command eq "start")
 	if ($running eq "")
 	{
 		print "Starting Alien Arena Server...\n";
-		if (-f "$ALIENARENADIR/nostart")
+		if (-f "'$ALIENARENADIR/nostart'")
 		{
-			print "Removing $ALIENARENADIR/nostart\n";
+			print "Removing '$ALIENARENADIR/nostart'\n";
 			# Remove the lock file if it exists
-			unlink("$ALIENARENADIR/nostart");
+			unlink("'$ALIENARENADIR/nostart'");
 		}
 		# Start the screen process
-		system("/usr/bin/nohup $ALIENARENADIR/startalenarena > $ALIENARENADIR/AlienArenaServerStartup.log\&");
+		system("/usr/bin/nohup '$ALIENARENADIR/startalenarena' > '$ALIENARENADIR/AlienArenaServerStartup.log'\&");
 	}
 }
 elsif ($Command eq "stop")
@@ -64,10 +64,10 @@ elsif ($Command eq "stop")
 }
 elsif ($Command eq "restart")
 {
-	if (-f "$ALIENARENADIR/nostart")
+	if (-f "'$ALIENARENADIR/nostart'")
 	{
-		print("Removing $ALIENARENADIR/nostart\n");
-		unlink("$ALIENARENADIR/nostart");
+		print("Removing '$ALIENARENADIR/nostart'\n");
+		unlink("'$ALIENARENADIR/nostart'");
 	}
 	if ($running ne "")
 	{
