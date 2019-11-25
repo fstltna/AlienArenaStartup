@@ -27,7 +27,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-my $ALIENARENADIR = "/root/AlienArena";
+my $ALIENARENADIR = "/root/alienarena";
 
 my $Command = $ARGV[0];
 if ($Command eq "")
@@ -35,7 +35,7 @@ if ($Command eq "")
 	$Command = "NONE";
 }
 
-my $running=`ps ax|grep "alienarena-linux64-dedicated"|grep -v grep`;
+my $running=`ps ax|grep "alienarena-ded"|grep -v grep`;
 
 if ($Command eq "start")
 {
@@ -59,7 +59,7 @@ elsif ($Command eq "stop")
 	if ($running ne "")
 	{
 		# Process is running, kill it
-		system("killall \"alienarena-linux64-dedicated\"");
+		system("killall \"/alienarena-ded\"");
 	}
 }
 elsif ($Command eq "restart")
@@ -71,7 +71,7 @@ elsif ($Command eq "restart")
 	}
 	if ($running ne "")
 	{
-		system("killall \"alienarena-linux64-dedicated\"");
+		system("killall \"/alienarena-ded\"");
 	}
 }
 elsif ($Command eq "status")
