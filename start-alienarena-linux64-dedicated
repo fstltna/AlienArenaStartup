@@ -1,4 +1,4 @@
 #!/bin/bash
-cd /root/alienarena
+cd /home/aaowner/alienarena
 bin/alienarena-ded +exec server.cfg 
 exit 0
