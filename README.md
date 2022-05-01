@@ -11,6 +11,8 @@ These start up the Alien Arena server at boot time with a "screen" process.
 1. Copy **alienarena** into **/home/aaowner/bin** - make sure it is executable
 2. Copy **startalienarena** into **/home/aaowner/alienarena** - make sure it is executable
 3. Copy **start-alienarena-linux64-dedicated** into **/home/aaowner/alienarena** - make sure it is executable
+4. Add **@reboot /home/aaowner/bin/alienarena start** to the crontab file
+
 
 When you want to view the Alien Arena console, just enter "**screen -r**" in your shell.
 
