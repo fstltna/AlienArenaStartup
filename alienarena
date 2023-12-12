@@ -59,7 +59,7 @@ elsif ($Command eq "stop")
 	if ($running ne "")
 	{
 		# Process is running, kill it
-		system("killall \"/alienarena-ded\"");
+		system("killall \"alienarena-ded\"");
 	}
 }
 elsif ($Command eq "restart")
@@ -71,7 +71,7 @@ elsif ($Command eq "restart")
 	}
 	if ($running ne "")
 	{
-		system("killall \"/alienarena-ded\"");
+		system("killall \"alienarena-ded\"");
 	}
 }
 elsif ($Command eq "status")
